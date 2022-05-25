@@ -41,7 +41,7 @@
 
 12f Penggunaan Websocket
 
-12fi Pesting pada Raspi
+12fi Posting pada Raspi
 
 12g Menggunakan Theme01 dan Flask Moment
 
