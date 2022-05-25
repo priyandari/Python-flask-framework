@@ -57,7 +57,7 @@
 	
 	$env:FLASK_APP='application.py'
 	
-	<img source="https://github.com/priyandari/Python-flask-framework/blob/master/images/Capture14d.PNG">
+	<img src="https://github.com/priyandari/Python-flask-framework/blob/master/images/Capture14d.PNG" width="500" height="600">
 
 ### Theme css menggunakan Bulma
 
