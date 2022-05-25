@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The five time</title>
+    <!-- Theme01 -->
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <script defer src="static/js/all.js"></script>
+    <!-- JQuery -->
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <!-- <script type="text/javascript" src="static/js/socket.io.min.js"></script> -->
+    <!-- <script src="static/js/application.js"></script> -->
+    <!-- flask-moment -->
+    {{ moment.include_moment() }}
+    <script type="text/javascript" src="static/js/moment-with-locales.min.js"></script>
+		<script>
+      var update = function () {          
+      // using jQuery (really not a must):
+      //$("#timestamp").html(moment().format('x'));
+      // or without jquery
+      moment.locale('id');
+      document.getElementById("realtimeclock").innerHTML = moment().format('Do MMMM YYYY, h:mm:ss');
+      flask_moment_render_all();
+      };
+
+      $(document).ready(function(){
+          setInterval(update, 100);           
+      });
+  </script>
+  </head>
+  <body style="height: 100%; width: 100%; position: fixed;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent is-3">
+      <div class="tile is-12 is-vertical is-parent is-fixed">
+        <div class="tile is-child box has-background-success-dark">
+          <div class="level">
+            <p class="title is-2 has-text-white">SHUBUH</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <!-- Cara print menggunakan flask-moment -->
+              <p class="level-item title is-1  has-text-white"><strong>{{ moment(timeAdhans.fajr, local=True).format('HH:mm') }}</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-child box has-background-primary-dark">
+          <div class="level">
+            <p class="title is-2 has-text-white">SYURUQ</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <!-- Cara print menggunakan format biasa flask -->
+              <p class="level-item title is-1 has-text-white"><strong>{{ timeAdhans.shuruq.strftime('%H:%M')}}</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-child box has-background-warning-light">
+          <div class="level">
+            <p class="title is-2 ">ZHUHUR</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <p class="level-item title is-1 "><strong>{{ timeAdhans.zuhr.strftime('%H:%M')}}</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-child box has-background-info-dark">
+          <div class="level">
+            <p class="title is-2 has-text-white">'ASHAR</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <p class="level-item title is-1 has-text-white"><strong>{{ timeAdhans.asr.strftime('%H:%M')}}</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-child box has-background-warning-dark">
+          <div class="level">
+            <p class="title is-2 has-text-white">MAGHRIB</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <p class="level-item title is-1 has-text-white"><strong>{{ timeAdhans.maghrib.strftime('%H:%M')}}</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-child box has-background-dark">
+          <div class="level">
+            <p class="title is-2 has-text-white">'ISYA'</p>
+            <!-- Right side -->
+            <div class="level-right">
+              <p class="level-item title is-1 has-text-white"><strong>{{ timeAdhans.isha.strftime('%H:%M')}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="tile is-vertical is-parent is-fixed">
+        <div class="tile is-child box">
+          <section>                        
+            <div class="container">
+              <div class="notification has-background-success-light has-text-centered box">
+                <h1 class="title is-1">MUSHOLA AS SALAM</h1>
+                <h5 class="subtitle is-3">Sorogenen II, Purwomartani, Kalasan, Sleman, DIY</h5>              
+              </div>
+            </div>          
+          </section>
+          <section>
+            <!-- Main container -->
+            <nav class="level">
+              <!-- Left side -->
+              <div class="level-left">
+                <div class="level-item">
+                  <p class="subtitle is-3">
+                  </p>
+                </div>
+              </div>
+              <!-- Right side -->
+              <div class="level-right has-background-white-bis title is-2 has-text-success-dark">
+                  <div class="" id="realtimeclock">
+                    <strong >Realtime Clock</strong>
+                  </div>
+              </div>
+            </nav>            
+          </section>
+          <section>
+            <article class="media">
+              <div class="media-content slideshow-container">
+                <div class="mySlides fade content">
+                  <figure class="media-left">
+                    <p class="image is-16by9">
+                      <img src="../static/images/img_mountains_wide.jpg">
+                    </p>
+                  </figure>
+                </div>
+                <div class="mySlides fade content">
+                  <figure class="media-left">
+                    <p class="image is-16by9">
+                      <img src="../static/images/img_nature_wide.jpg">
+                    </p>
+                  </figure>
+                </div>
+                <div class="mySlides fade content">
+                  <figure class="media-left">
+                    <p class="image is-16by9">
+                      <img src="../static/images/img_snow_wide.jpg">
+                    </p>
+                  </figure>
+                </div>                
+              </div>
+              <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+              <div class="media-right">
+                <button class="fas fa-clock fa-lg fa-4x has-text-danger-dark"></button>
+              </div>
+            </article>
+          </section>          
+          <section>                        
+            <div class="container">
+              <!-- Sekian waktu (jam, menit, detik ) dari waktu, Misalkan -->
+              Zhuhur {{ moment(timeAdhans.zuhr, local=True).fromNow(refresh = True) }}
+              <!-- TODO: Gunakan IFELSE untuk menentukan menuju waktu yang mana -->
+            </div>          
+          </section>
+          <section>                        
+            <div class="container">
+              <div class="content has-text-centered">
+                <progress class="progress is-large is-primary" max="100">60%</progress>
+                <p>
+                  <strong>Mitra24</strong> by Priyandari. The source code is licensed
+                  CC BY NC SA 4.0.
+                </p>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 10000); // Change image every 2 seconds
+      }
+      </script>
+
+
+
+  </body>
+</html>
