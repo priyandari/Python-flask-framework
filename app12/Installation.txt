@@ -1,0 +1,16 @@
+
+Requirements
+gevent-websocket
+pip install gevent-websocket
+
+adhan
+pip install adhan
+
+Urutan Agar Tampilan terupdate
+Ctr+F5  atau F5
+atau
+Ctr+R   
+
+Kemudian ubah sedikit pada application.py, lalu restart aplikasi
+Hasilnya mesti berubah.
+

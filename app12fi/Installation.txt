@@ -1,0 +1,38 @@
+
+Requirements
+flask-socketio
+pip install flask-socketio
+kalau di pi
+> sudo pip3 install flask-socketio
+
+
+gevent-websocket
+pip install gevent-websocket 
+kalau di pi
+> sudo pip3 install gevent-websocket
+
+adhan
+pip install adhan
+> sudo pip3 install adhan
+
+pytz
+pip install pytz
+> sudo pip3 install pytz
+
+
+Urutan Agar Tampilan terupdate
+Ctr+F5  atau F5
+atau
+Ctr+R   
+
+Kemudian ubah sedikit pada application.py, lalu restart aplikasi
+Hasilnya mesti berubah.
+
+
+Final @12f
+
+Next
+1. Test run on pi with kiosk mode
+
+2. Try to use cron job to reduce thread process
+

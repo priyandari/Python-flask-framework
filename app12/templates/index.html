@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Waktu Sholat Sorogenen</title>
+    </head>
+    <body>
+        <h1>Jadwal Waktu Sholat</h1>
+        <h1>Mushola As-Salam</h1>
+        <h2>Tanggal : {{ timeprayers['fajr'].date() }}</h2>
+
+        <table border="1">
+            <tr>
+                <th width="100">Jadwal</th>
+                <th width="150">Waktu Sholat</th>
+            </tr>
+            <tr align="center">
+                <td>Subuh</td>
+                <td><!--{{ timeprayers['fajr'].time() }} --> {{ timeprayers['fajr'].strftime("%H:%M") }}</td>
+            </tr>
+            <tr align="center">
+                <td>Terbit</td>
+                <td>{{ timeprayers['shuruq'].strftime("%H:%M") }}</td>
+            </tr>
+            <tr align="center">
+                <td>Zhuhur</td>
+                <td>{{ timeprayers['zuhr'].strftime("%H:%M") }}</td>
+            </tr>
+            <tr align="center">
+                <td>'Ashar</td>
+                <td>{{ timeprayers['asr'].strftime("%H:%M") }}</td>
+            </tr>
+            <tr align="center">
+                <td>Maghrib</td>
+                <td>{{ timeprayers['maghrib'].strftime("%H:%M") }}</td>
+            </tr>
+            <tr align="center">
+                <td>'Isya'</td>
+                <td>{{ timeprayers['isha'].strftime("%H:%M") }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
