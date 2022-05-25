@@ -56,6 +56,8 @@
 	Jika running di visual code, dimana aplikasi bernama application.py, bukan app.py
 	
 	$env:FLASK_APP='application.py'
+	
+	<img source="https://github.com/priyandari/Python-flask-framework/blob/master/images/Capture14d.PNG">
 
 ### Theme css menggunakan Bulma
 
