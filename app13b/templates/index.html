@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Flask-Moment example app</title>
+        {{ moment.include_moment() }}
+        <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>       
+        <script type="text/javascript" src="static/js/moment-with-locales.min.js"></script>
+		<script>
+        var update = function () {
+            
+        // using jQuery (really not a must):
+        //$("#timestamp").html(moment().format('x'));
+        // or without jquery
+        moment.locale('en');
+        document.getElementById("realtime").innerHTML = moment().format('LTS');
+        flask_moment_render_all();
+        };
+
+        $(document).ready(function(){
+            setInterval(update, 100);           
+        });
+    </script>
+    </head>
+    <body>
+        <p id="realtime">0. Di sini </p>
+        <p>00. {{ moment().format('LTS') }} </p>
+        <p>01. {{ moment().format('LTS', refresh = True) }} </p>
+        <p>1. The current date and time is: {{ moment().format('MMMM Do YYYY, h:mm:ss a') }}.</p>
+        <p>
+            {{ moment(midnight).fromTime(now) }} it was midnight in the UTC timezone. 
+            That was {{ moment(midnight).calendar() }} in your local time.
+        </p>
+        <p>
+            2. Unix epoch is {{ moment(epoch, local=True).format('LLLL') }} in the UTC timezone.
+            That was {{ moment(epoch).format('LLLL') }} in your local time.
+        </p>
+        <p>
+            3. This page was rendered on {{ moment(now).format('LLL') }},
+            which was {{ moment(now).fromNow(refresh = True) }}.
+        </p>
+        <p>
+        </p>
+        <div id="ajax"></div>
+        <a href="#" onclick="load_ajax_timestamp()">Load Ajax timestamp</a>
+    </body>
+</html>

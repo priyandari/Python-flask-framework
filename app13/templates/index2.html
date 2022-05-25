@@ -1,0 +1,40 @@
+{% block head %}
+<title>12</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" href="/static/css/style.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='css/favicon.ico') }}" type="image/x-icon">
+{% endblock %}
+
+{% block page_content %}
+<audio id="over_music">
+    <source src="{{ url_for('static', filename='images/beepbeep.mp3') }}">
+</audio>
+<div>
+    <div class="alert-info">
+        <div id="title-msjd">Mushola As Salam</div>
+        <div>{{ timeprayers['fajr'].strftime("%d %b %Y") }}</div>
+    </div>
+</div>
+<div class="timer">    
+    <table style="font-size: 0.3em; text-align: center;">
+    <tr><td style="width: 30%;"></td><td></td><td style="width: 30%;"></td></tr>
+    <tr><td>Subuh</td><td><p id="time">Time's Up!</p></td><td>Maghrib</td></tr>
+    <tr><td>{{ timeprayers['fajr'].strftime("%H:%M") }}</td><td></td><td>{{ timeprayers['maghrib'].strftime("%H:%M") }}</td></tr>
+    <tr><td></td><td>_____</td><td></td></tr>
+    <tr><td>Zhuhur</td><td>'Ashar</td><td>'Isya'</td></tr>
+    <tr><td>{{ timeprayers['zuhr'].strftime("%H:%M") }}</td><td>{{ timeprayers['asr'].strftime("%H:%M") }}</td><td>{{ timeprayers['isha'].strftime("%H:%M") }}</td></tr>
+    </table>
+</div>
+
+<div class="footer">
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+</script>
+
+{% endblock %}

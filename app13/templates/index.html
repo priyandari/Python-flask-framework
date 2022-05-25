@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Waktu Sholat Sorogenen</title>
+        <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>       
+        <script type="text/javascript" src="static/js/moment-with-locales.min.js"></script>
+    </head>
+    <body>
+        <h1 id="timestamp"> Realtime Clock di Sini</h1>
+        <h2>Subuh : {{ timeAdzans['fajr'] }}</h2>
+        <h2>
+            {{ moment().format('MMMM Do YYYY, h:mm:ss a') }}
+
+            <script>
+                moment().format('MMMM Do YYYY, h:mm:ss a');
+            </script>
+        </h2>
+    </body>
+
+    <script>
+        var update = function () {
+        // using jQuery (really not a must):
+        //$("#timestamp").html(moment().format('x'));
+        // or without jquery
+        moment.locale('id');
+        document.getElementById("timestamp").innerHTML = moment().format('LTS');
+        };
+        flask_moment_render_all();
+        
+        $(document).ready(function(){
+            setInterval(update, 100);           
+        });
+    </script>
+</html>

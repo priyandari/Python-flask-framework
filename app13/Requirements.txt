@@ -1,0 +1,6 @@
+> pip install flask-bower
+
+> pip install flask-moments
+
+download
+moment.js dan taruh di static saja

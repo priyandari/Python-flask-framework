@@ -1,0 +1,90 @@
+body {
+    font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,
+                     'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+}
+
+.alert-info {
+    background: #d0f3d9;
+    display: block;
+    padding: 10px 10px;
+    text-align:center;
+    width: 100%;
+    margin: auto;
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+}
+
+#title-msjd {
+    font-weight: bold;
+    color: #000702;
+}
+
+.timer {
+    height: 35%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: FranklinGothic, Verdana, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* responsive media queries */
+
+@media (min-width: 280px) {
+    #title-msjd {
+        font-size: 1em;
+    }
+    .timer {
+        font-size: 70px;
+    }
+    .alert-info {
+        margin-top: 0px;
+    }
+
+    .github, .quote {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .timer {
+        font-size: 100px;
+    }
+
+    .github, .quote {
+        display: block;
+    }
+}
+
+@media (min-width: 980px) {
+    .timer {
+        font-size: 120px;
+    }
+
+    .github, .quote {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    #title-msjd {
+        font-size: 2em;
+    }
+    .timer {
+        font-size: 100px;
+    }
+
+    .github, .quote {
+        display: block;
+    }
+}
