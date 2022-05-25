@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Edit Data</title>
+    </head>
+    <body>
+        <h2>Edit Data</h2>
+        <form action="url_for('edit', kode={{data[0]}})" method="POST">
+            Kode: <br>
+            <input type="text" name="kode" size="15" value="{{data[0]}}" maxlength="4" readonly><br>
+            Judul Film: <br>
+            <input type="text" name="judul" size="50" value="{{data[1]}}" maxlength="40" ><br>
+            Category: <br>
+            <input type="text" name="category" size="30" value="{{data[2]}}" maxlength="25" ><br>
+            <p><input type="submit" value="Simpan"></p>
+
+        </form>
+    </body>
+</html>

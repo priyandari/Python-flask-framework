@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Tambah Data</title>
+    </head>
+    <body>
+        <h2>Tambah Data</h2>
+        <form action="{{url_for('add')}}" method="POST">
+            Kode:<br>
+            <input type="text" name="kode" size="15" maxlength="4"><br>
+            Judul Film:<br>
+            <input type="text" name="judul" size="50" maxlength="40"><br>
+            Category:<br>
+            <input type="text" name="category" size="30" maxlength="25"><br>
+            <p><input type="submit" value="Simpan"></p>
+        </form>
+    </body>
+</html>
