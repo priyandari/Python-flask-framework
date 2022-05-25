@@ -1,4 +1,4 @@
-Tutorial:
+### Tutorial:
 
 01 Instalasi Flask
 
@@ -28,5 +28,35 @@ Folder Application:
 
 10 Upload File
 
-11 Akses Database
+11 Akses Database (sqlite3)
 
+11mysql Database Mysql (python 3.9)
+
+13b Flask-moment (basic)..
+
+
+### Studi Kasus 
+
+12 Aplikasi Waktu Sholat (basic)
+
+12f Penggunaan Websocket
+
+12fi Pesting pada Raspi
+
+12g Menggunakan Theme01 dan Flask Moment
+
+14 Aplikasi Waktu Sholat (theme01 + menampilkan RTC menggunakan flask-moment)
+
+14b Aplikasi Waktu Sholat (14 + menampilkan waktu sholat)
+
+14c Aplikasi Waktu Sholat (14b + Pesan: X dalam y time, misal Zuhur dalam 2 jam + Revisi lain karena ukuran layar)
+
+14d Aplikasi Waktu Sholat (14c + Kiosk + Crontab reboot Raspi @ midnight  )
+
+	Jika running di visual code, 
+	
+	$env:FLASK_APP='application.py'
+
+### Theme css menggunakan Bulma
+
+theme01 
