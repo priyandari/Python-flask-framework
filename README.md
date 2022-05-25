@@ -53,7 +53,7 @@
 
 14d Aplikasi Waktu Sholat (14c + Kiosk + Crontab reboot Raspi @ midnight  )
 
-	Jika running di visual code, 
+	Jika running di visual code, dimana aplikasi bernama application.py, bukan app.py
 	
 	$env:FLASK_APP='application.py'
 
